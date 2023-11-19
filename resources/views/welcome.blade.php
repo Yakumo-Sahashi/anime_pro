@@ -50,13 +50,4 @@
             </div>
         </div>
     </div>
-    @auth
-    <div class="">
-        <img class="wafle" width="20%" src="{{asset('images/waifu/waifu02.png')}}" alt="">
-    </div>
-    @else
-    <div class="">
-        <img class="wafle" width="30%" src="{{asset('images/waifu/waifu01.png')}}" alt="">
-    </div>
-    @endauth
 @endsection

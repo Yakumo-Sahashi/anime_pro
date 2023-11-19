@@ -15,14 +15,17 @@
 </head>
 <body class="{{$clase}}">
     @include('loader')
-    @if ($titulo == "Hunter x Hunter")
-        @include('componente/header')
-    @endif
-    @include('componente/navbar')
-    <div class="container mt-4">
-        @yield('contenido')   
-    </div>  
-    @include('componente/footer')  
+    <div class="min-vh-100 d-flex flex-column justify-content-between">
+        <main class="main">
+            <section class="section my-0 py-0">
+                @include('componente/navbar')
+                <div class="container mt-1">
+                    @yield('contenido')   
+                </div> 
+            </section>
+        </main>
+        @include('componente/footer') 
+    </div>     
     <script type="text/javascript" src="{{ asset('js/main.js')}}"></script>
 </body>
 </html>

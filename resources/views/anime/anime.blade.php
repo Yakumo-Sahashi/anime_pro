@@ -42,11 +42,13 @@
 				<i class="far fa-pause-circle"></i> <b>{{$info_anime->estado}}</b>
 			</span>	
 			@endif
-			@if($fav == 1)
-			<a href="{{route('eliminar.favorito',$info_anime->id_anime)}}" class="btn btn-danger btn-block"><i class="fas fa-heart-broken"></i> Eliminar de Favoritos</a>
-			@else
-			<a href="{{route('insert.favorito',$info_anime->id_anime)}}" class="btn btn-danger btn-block"><i class="far fa-heart"></i> Añadir a Favoritos</a>
-			@endif
+			@auth
+				@if($fav == 1)
+				<a href="{{route('eliminar.favorito',$info_anime->id_anime)}}" class="btn btn-danger btn-block"><i class="fas fa-heart-broken"></i> Eliminar de Favoritos</a>
+				@else
+				<a href="{{route('insert.favorito',$info_anime->id_anime)}}" class="btn btn-danger btn-block"><i class="far fa-heart"></i> Añadir a Favoritos</a>
+				@endif
+			@endauth
 		</div>
 		<div class="col-md-8 ">
 			<div class="card shadow py-2" style="background-color: rgb(0,0,0,0.6);">

@@ -1,6 +1,6 @@
 @extends('plantilla')
 @section('contenido')
-<div class="row justify-content-around text-center text-white">
+<div class="row justify-content-around text-center text-white mt-3">
     <div class="col-md-5 py-2 rounded" style="background-color: rgb(0,0,0,0.6);">
         <h1 class="mt-3 text-uppercase">Login</h1>
         <hr class="bg-primary">
